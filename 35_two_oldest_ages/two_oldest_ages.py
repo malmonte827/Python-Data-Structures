@@ -13,6 +13,10 @@ def two_oldest_ages(ages):
         >>> two_oldest_ages([1, 5, 5, 2])
         (2, 5)
     """
+    ordered_ages = sorted(ages)
+    removed_duplicates = set(ordered_ages)
+    oldest = removed_duplicates[-2:]
+    return tuple(oldest)
 
     # NOTE: don't worry about an optimized runtime here; it's fine if
     # you have a runtime worse than O(n)
